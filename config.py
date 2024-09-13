@@ -2,7 +2,7 @@ import re, os, time
 from os import environ
 id_pattern = re.compile(r'^-100\d+$') 
 
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001984768732').split()] # give channel id with seperate space. Ex : ('-1001984768732')    
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '@LKD_Latest_Korean_Dramaa').split()] # give channel id with seperate space. Ex : ('-1001984768732')    
 class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "")
