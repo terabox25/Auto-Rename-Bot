@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery, Message, InputMediaPhoto
 from pyrogram.errors import *
 from helper.database import madflixbotz
-from config import AUTH_CHANNEL, Config, Txt  
+from config import Config, Txt  
 
 async def is_subscribed(bot, query, channel):
     btn = []
