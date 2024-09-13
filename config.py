@@ -1,6 +1,6 @@
 import re, os, time
 from os import environ
-id_pattern = re.compile(r'^.\d+$') 
+id_pattern = re.compile(r'^-100\d+$') 
 
 AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1001984768732').split()] # give channel id with seperate space. Ex : ('-1001984768732')    
 class Config(object):
