@@ -1,7 +1,10 @@
 import re, os, time
+import logging
+from logging.handlers import RotatingFileHandler
 from os import environ
 id_pattern = re.compile(r'^-100\d+$') 
 
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 AUTH_CHANNEL = environ.get("AUTH_CHANNEL", "1001984768732") # give channel id with seperate space. Ex : ('-1001984768732')    
 class Config(object):
     # pyro client config
@@ -23,7 +26,7 @@ class Config(object):
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
 
-
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {mention}\n\n<b>You Need To Join In My Channel/Group To Use Me\n\nKindly Please Join Channel</b>")
 class Txt(object):
     # part of text configuration
         
